@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b2c64987-cadc-4343-a815-22a2f5ea8fff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/xiaomingyk/alg/ArrayAlgo.java" afterPath="$PROJECT_DIR$/src/main/java/com/xiaomingyk/alg/ArrayAlgo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/xiaomingyk/alg/AppTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/xiaomingyk/alg/AppTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,8 +46,8 @@
       <file leaf-file-name="ArrayAlgo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xiaomingyk/alg/ArrayAlgo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="268">
+              <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -55,8 +56,8 @@
       <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/xiaomingyk/alg/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="51" column="5" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,8 +97,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/xiaomingyk/alg/App.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/xiaomingyk/alg/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xiaomingyk/alg/ArrayAlgo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiaomingyk/alg/AppTest.java" />
       </list>
     </option>
   </component>
@@ -497,6 +498,21 @@
     <history-entry file="AppTest - 2017.05.16 at 07h 48m 56s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AppTest - 2017.05.17 at 07h 52m 14s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2017.05.17 at 07h 53m 53s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2017.05.17 at 07h 54m 51s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2017.05.17 at 07h 55m 28s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2017.05.17 at 07h 55m 59s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -573,16 +589,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xiaomingyk/alg/ArrayAlgo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="268">
+          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/xiaomingyk/alg/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="51" column="5" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

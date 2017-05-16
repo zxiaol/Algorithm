@@ -38,16 +38,37 @@ public class AppTest
 
     public void testRemoveElemGreater(){
 
+        System.out.println("testRemoveElemGreater");
+
+
         int[] array = {1,5,7,8,12,8,9,4};
 
         int newLength = ArrayAlgo.RemoveElemGreater(array,8);
 
-        for (int i:array) {
-            System.out.println(i);
+        for(int i = 0; i < newLength; i++){
+
+            System.out.println(array[i]);
         }
 
         assertEquals(newLength,6);
 
+
+    }
+
+    public void testRemoveDuplicateFromSortedArray(){
+
+        System.out.println("testRemoveDuplicateFromSortedArray");
+
+        int[] array= {1,1,1,1,1,3,3,4,4,4,5,6,7};
+
+        int newLength = ArrayAlgo.RemoveDuplicateFromSortedArray(array);
+
+        for(int i = 0; i < newLength; i++){
+
+            System.out.println(array[i]);
+        }
+
+        assertEquals(6,newLength);
 
     }
 }

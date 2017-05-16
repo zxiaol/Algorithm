@@ -24,7 +24,7 @@ public class ArrayAlgo {
         return j;
     }
 
-    public static int RemoveDuplicateFromSortedArray(int[] array, int target){
+    public static int RemoveDuplicateFromSortedArray(int[] array){
 
         int j = 0;
 
