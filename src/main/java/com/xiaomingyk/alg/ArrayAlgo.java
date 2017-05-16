@@ -23,4 +23,22 @@ public class ArrayAlgo {
 
         return j;
     }
+
+    public static int RemoveDuplicateFromSortedArray(int[] array, int target){
+
+        int j = 0;
+
+        for(int i = 1; i < array.length; i++){
+
+            if(array[i] != array[j]){
+
+                array[++j] = array[i];
+
+            }
+        }
+
+        return j+1;
+
+
+    }
 }
