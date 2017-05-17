@@ -71,4 +71,13 @@ public class AppTest
         assertEquals(6,newLength);
 
     }
+
+    public void testGenerateTriangle(){
+
+        System.out.println("testGenerateTriangle");
+
+
+        ArrayAlgo.generatePascalTriangle(5);
+
+    }
 }
