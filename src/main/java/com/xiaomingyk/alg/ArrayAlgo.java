@@ -48,46 +48,54 @@ public class ArrayAlgo {
 
         if( n < 1)return;
 
-        ArrayList<ArrayList<Integer>> triangle = new ArrayList<ArrayList<Integer>>(n);
+        ArrayList<int[]> triangle = new ArrayList<int[]>();
 
         for(int i = 1; i <= n; i++){
 
-            ArrayList<Integer> line = new ArrayList<Integer>(i);
+            int[] line = new int[i];
 
-            line.set(0,1);
+            line[0] = 1;
 
-            line.set(i-1,1);
+            line[i-1] = 1;
 
             for(int j = 1; j < i-1;j++){
 
-                line.set(j,triangle.get(i-2).get(j-1)+triangle.get(i-2).get(j));
+                line[j] = triangle.get(i-2)[j-1]+triangle.get(i-2)[j];
             }
 
             triangle.add(line);
 
-            System.out.println("[");
+            System.out.print("[");
 
             for(int k = 0; k < n; k++){
 
                 if(k < (n-i)/2){
 
-                    System.out.println(" ");
+                    System.out.print(" ");
 
                 }else if( k < (n-i)/2 + i ){
 
-                    System.out.println(line.get(k-(n-i)/2));
+                    System.out.print(line[k-(n-i)/2]);
+
+                    System.out.print(" ");
+
                 }else {
-                    break;
+
+                    System.out.print(" ");;
                 }
 
 
 
             }
 
-            System.out.println("]");
+            System.out.print("]");
 
-
+            System.out.println();
 
         }
     }
+
+
+
+
 }
