@@ -1,5 +1,7 @@
 package com.xiaomingyk.alg;
 
+import java.util.Map;
+
 /**
  * Created by My on 5/23/2017.
  */
@@ -12,12 +14,12 @@ public class BinTreeNode{
 
     private BinTreeNode right;
 
-    public void BinTreeNode(int value){
+    public BinTreeNode(int value){
 
         this.value = value;
     }
 
-    public void BinTreeNode(int value,BinTreeNode left,BinTreeNode right){
+    public BinTreeNode(int value,BinTreeNode left,BinTreeNode right){
 
         this.value = value;
         this.left = left;
@@ -37,5 +39,39 @@ public class BinTreeNode{
     public void setValue(int value) {
 
         this.value = value;
+    }
+
+    public BinTreeNode getLeft() {
+
+        return left;
+    }
+
+    public BinTreeNode getRight() {
+
+        return right;
+    }
+}
+
+final class MyEntry<K, V> implements Map.Entry<K, V> {
+    private final K key;
+    private V value;
+
+    public MyEntry(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public K getKey() {
+        return key;
+    }
+
+    public V getValue() {
+        return value;
+    }
+
+    public V setValue(V value) {
+        V old = this.value;
+        this.value = value;
+        return old;
     }
 }
