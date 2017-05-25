@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import java.util.ArrayList;
+
 /**
  * Unit test for simple App.
  */
@@ -79,5 +81,20 @@ public class AppTest
 
         ArrayAlgo.generatePascalTriangle(5);
 
+    }
+
+    public void testTraverseBinTreeByLevelOrder(){
+        // input {3,9,20,#,#,15,7} return
+
+        ArrayList<String> tree = new ArrayList<String>();
+        tree.add("3");
+        tree.add("9");
+        tree.add("20");
+        tree.add("#");
+        tree.add("#");
+        tree.add("15");
+        tree.add("7");
+
+        TreeAlgo.traverseBinTreeByLevelOrder(tree);
     }
 }

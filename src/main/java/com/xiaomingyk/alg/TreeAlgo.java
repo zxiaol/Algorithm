@@ -92,14 +92,53 @@ public class TreeAlgo {
     //   [9,20]
     //   [15,7]
     // ]
-    public static ArrayList<ArrayList<String>> traverseBinTreeByLevelOrder(ArrayList<String> tree){
+    public static ArrayList<ArrayList<Integer>> traverseBinTreeByLevelOrder(ArrayList<String> tree){
+
+        BinTreeNode binTree = BinTreeNode.createTree(tree);
 
         ArrayList<ArrayList<Integer>> visitRlts = new ArrayList<ArrayList<Integer>>();
 
+        ArrayDeque<MyEntry<BinTreeNode,Integer>> visitQ = new ArrayDeque<MyEntry<BinTreeNode, Integer>>();
 
-        ArrayDeque<MyEntry<Integer,Integer>> visitQ = new ArrayDeque<MyEntry<Integer, Integer>>();
+        if(binTree != null){
 
-        return null;
+            visitQ.addLast(new MyEntry<BinTreeNode, Integer>(binTree,0));
+        }
+
+        while (! visitQ.isEmpty()){
+
+            MyEntry<BinTreeNode,Integer> cnt = visitQ.pollFirst();
+
+            if(visitRlts.size() == cnt.getValue()){
+
+                visitRlts.add(new ArrayList<Integer>());
+            }
+
+            visitRlts.get(cnt.getValue()).add(cnt.getKey().getValue());
+
+            if(cnt.getKey().getLeft()!=null){
+
+                visitQ.addLast(new MyEntry<BinTreeNode, Integer>(cnt.getKey().getLeft(),cnt.getValue()+1));
+            }
+
+            if(cnt.getKey().getRight()!=null){
+
+                visitQ.addLast(new MyEntry<BinTreeNode, Integer>(cnt.getKey().getRight(),cnt.getValue()+1));
+            }
+
+        }
+
+        for(int i = 0; i < visitRlts.size();i++){
+
+            for (int j = 0; j < visitRlts.get(i).size(); j++){
+
+                System.out.print(visitRlts.get(i).get(j));
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+
+        return visitRlts;
     }
 
     public boolean isSymmetricTree(BinTreeNode root){
