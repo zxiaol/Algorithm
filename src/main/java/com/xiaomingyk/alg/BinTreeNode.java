@@ -1,9 +1,6 @@
 package com.xiaomingyk.alg;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created by My on 5/23/2017.
@@ -88,6 +85,56 @@ public class BinTreeNode{
     public void setLeft(BinTreeNode left) {
 
         this.left = left;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if(this == obj) return true;
+
+        if(!(obj instanceof BinTreeNode)){
+
+            return false;
+        }
+
+        BinTreeNode another = (BinTreeNode)obj;
+
+        boolean leftEquals = false;
+
+        boolean rightEquals = false;
+
+        if(value != another.value)
+            return false;
+
+        if(left != null && another.left != null){
+
+            if(!left.equals(another.left)){
+
+                return false;
+            }
+        }else{
+
+            return false;
+        }
+
+        if(right != null && another.right != null){
+
+            if(!right.equals(another.right)){
+
+                return false;
+            }
+        }else{
+
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(value);
     }
 
     public int getValue() {
