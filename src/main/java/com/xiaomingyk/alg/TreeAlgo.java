@@ -263,11 +263,7 @@ public class TreeAlgo {
 
         ArrayList<ArrayList<BinTreeNode>> rltPath = new ArrayList<ArrayList<BinTreeNode>>();
 
-        ArrayList<BinTreeNode> cntPath = new ArrayList<BinTreeNode>();
-
         stack.push(new MyEntry<BinTreeNode, Integer>(tree,tree.getValue()));
-
-        cntPath.add(tree);
 
         while(!stack.isEmpty()){
 
@@ -277,43 +273,62 @@ public class TreeAlgo {
 
                 if(top.getValue() == target){
 
-                    rltPath.add(cntPath);
+                    copyStackToArrayList(stack,rltPath);
 
-                    cntPath = (ArrayList<BinTreeNode>) cntPath.clone();
                 }
 
                 while (!stack.isEmpty()){
 
                     BinTreeNode tTop = stack.pop().getKey();
 
-                    cntPath.remove(tTop);
+                    if(tTop.getRight() != null){
 
-                    if(tTop.getRight())
+                        int sum = tTop.getValue() + tTop.getRight().getValue();
+
+                        stack.push(new MyEntry<BinTreeNode, Integer>(tTop.getRight(),sum));
+
+                        break;
+                    }
                 }
             }else if(top.getKey().getLeft()!=null){
 
                 int sum = top.getKey().getValue() + top.getKey().getLeft().getValue();
                 stack.add(new MyEntry<BinTreeNode, Integer>(top.getKey().getLeft(),sum));
-                cntPath.add(top.getKey().getLeft());
 
-            }else if(top.getKey().getRight()!=null){
+            }else if(top.getKey().getRight()!=null) {
 
                 int sum = top.getKey().getValue() + top.getKey().getRight().getValue();
                 stack.pop();
-                stack.add(new MyEntry<BinTreeNode, Integer>(top.getKey().getRight(),sum));
-                cntPath.add(top.getKey().getRight());
+                stack.add(new MyEntry<BinTreeNode, Integer>(top.getKey().getRight(), sum));
 
             }
 
-
         }
-
-
 
         return null;
     }
 
+    private void copyStackToArrayList(Stack<MyEntry<BinTreeNode, Integer>> stack, ArrayList<ArrayList<BinTreeNode>> rltPath) {
+
+        ArrayList<BinTreeNode> cntPath = new ArrayList<BinTreeNode>(stack.size());
+
+        for(int i = 0; i < stack.size();i++){
+
+            cntPath.add(stack.get(i).getKey());
+        }
+
+        rltPath.add(cntPath);
+    }
+
     public int[] preorderTraverse(BinTreeNode tree){
+
+        if(tree == null)
+            return null;
+
+        Stack<BinTreeNode> stack = new Stack<BinTreeNode>();
+
+        ArrayList<>
+
 
         return null;
     }
